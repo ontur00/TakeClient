@@ -5,6 +5,7 @@ import java.util.GregorianCalendar;
 
 
 
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -16,15 +17,13 @@ public class Club implements Serializable {
 	private int id;									//id klubu
 	private String clubName;						//nazwa klubu
 	private String nationality;						//narodowosc
-	
+	private String make;							//zwraca make	
+
 	private GregorianCalendar dateCreateClub;		//data utworzenia klubu
 	private int year;								//rok
 	private int month;								//miesiac
 	private int day;								//dzien
-	
 
-	@Id
-	@GeneratedValue
 	@XmlAttribute
 	public int getId() {
 		return id;
@@ -40,6 +39,14 @@ public class Club implements Serializable {
 	
 	public void setClubName(String clubName) {
 		this.clubName = clubName;
+	}
+	
+	public String getMake() {
+		return make;
+	}
+
+	public void setMake(String make) {
+		this.make = make;
 	}
 	
 	public String getNationality() {

@@ -27,7 +27,6 @@ public class KomisTableModel extends AbstractTableModel{
 	public void init() {
 		cars = carDAO.get();
 	}
-
 	
 	@Override
 	public int getColumnCount() {
